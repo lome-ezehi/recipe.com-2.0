@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="img/rcon.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <title>Recipe.com</title>
+        <style>
+            *{
+                margin: 0;
+            }
+
+            button:hover{
+                transition: ease 0.2s;
+                font-weight: bold;
+            }
+            .first p{
+                font-size: 20px;
+            }
+            .page-footer{
+                background: linear-gradient(to bottom, white, #e65100);
+            }
+            .page-footer p{
+                color: black;
+            }
+            .footer-copyright{
+                padding: 0px;
+                margin: 0;
+            }
+            .page-footer .container a{
+                padding-bottom: 10px;
+            }
+                      
+/*
+            .card {
+                position:relative;
+                z-index:1;
+            }
+            .cardbg {
+            position:absolute;
+            left:0px;
+            top:0px;
+            width:100%;
+            height:100%;
+            z-index: 0;
+            } 
+
+*/
+            
+            header > nav{
+                z-index: 1;
+                position: fixed;
+            }
+            /* #chef-cont{
+            } */
+            .section h3, h1{
+                color: white;
+                font-style: italic;
+            }
+            .section h6{
+                color: #ef6c00;
+                font-style: italic;
+                font-size: 20px;
+            }
+            span{
+                color: #ef6c00;
+            }
+            .btn{
+                border-radius: 10px;
+            }
+            .video-container {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+            .section.mobile {
+            position: relative;
+            text-align: left;
+            color: white;
+            }
+            .something {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+            .something.mobile {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            }
+            .image-cont {
+            position: relative;
+            text-align: center;
+            color: white;
+            }
+
+            .image-content{
+                position: absolute;
+                font-size: 35px;
+                text-decoration: underline;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav class="nav-wrapper white ">  
+                <div class="container navbar">
+                    <a href="index.html" class="brand-logo hide-on-large-only">
+                        <img src="Img/logo.png" width="150px"  alt="brand-logo">
+                    </a>
+                    <a href="#mobile-links" class="sidenav-trigger hide-on-large-only">
+                        <i class="material-icons orange-text text-darken-4">menu</i>
+                    </a>
+
+                    <div class="row">
+                        <div class="col pull-l1">
+                            <a href="index.html">
+                                <img src="Img/logo.png" style="width: 150px;"  class="hide-on-med-and-down" alt="logo">
+                            </a>
+                        </div>
+                        <div class="container col push-l1 hide-on-med-and-down" >
+                            <ul>
+                                <li>
+                                    <a href="" class="orange-text text-darken-4" >Who We Are</a>
+                                </li>
+                                <li>
+                                    <a href="" class="orange-text text-darken-4" >Find a Recipe</a>
+                                </li>
+                                <li>
+                                    <a href="" class="orange-text text-darken-4" >Our Review</a>
+                                </li>
+                                <li>
+                                    <a href="" class="orange-text text-darken-4" >Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col push-l1 hide-on-med-and-down">
+                            <button class="btn orange darken-4">Login</button>
+                        </div>
+                    </div>
+                </div>        
+            </nav>
+
+            <ul class="sidenav white" id="mobile-links">
+                <li>
+                    <a href="" class="orange-text text-darken-3" >Who We Are</a>
+                </li>
+                <li>
+                    <a href="" class="orange-text text-darken-3" >Find a Recipe</a>
+                </li>
+                <li>
+                    <a href="" class="orange-text text-darken-3" >Our Review</a>
+                </li>
+                <li>
+                    <a href="" class="orange-text text-darken-3" >Contact Us</a>
+                </li>
+                <br>
+                <div class="container center-align">
+                    <button class="btn btn-large btn orange darken-3">LOGIN</button>
+                </div>
+            </ul>
+
+            <div class="video-container  hide-on-med-and-down">
+                <video width="100%"  class="responsive-video" autoplay loop>
+                    <source src="Img/header-bg-vid.mp4"  type="video/mp4" >
+                </video>
+                <div class="something">
+                    <h1>Every Dish Tells a <br> Story.</h1>
+                    <h4>Explore, Cook and Create With Us.</h4><br>
+                    <button class="btn btn-large orange darken-4">Get Started</button>
+                </div>
+            </div>
+            <div class="section mobile hide-on-large-only">
+                <img src="Img/welcome-banner.jpg" width="100%" alt="">
+                <div class="something mobile">
+                    <h5 style=" font-size: 25px;" class="left-align">Every Dish Tells a Story.</h5>
+                    <h6 style="color: white; font-size: 15px;">Explore, Cook and Create With Us.</h6><br>
+                    <button class="btn orange darken-4">Get Started</button>
+                </div>
+            </div>
+        </header>
+
+
+        <main>
+            <br>
+            <br>
+            <div class="container first">
+                <div class="row">
+                    <div class="col l6">
+                        <h3><em>Start your culinary journey <span style="color: rgb(216, 100, 12);">today.</span> </em></h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ipsam accusamus quis placeat rem hic voluptatem doloremque quaerat repellat aut soluta modi magni assumenda fugit, nisi ex quas velit amet!</p><br>
+                        <button class="btn btn-large orange darken-4">START YOUR JOURNEY</button>
+                    </div>
+                    <div class="col l6 hide-on-med-and-down">
+                        <img src="Img/spagetti.png" width="100%" alt="">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            
+            <div class="container center-align hide-on-med-and-down">
+                <h3 style="color: black;">Select a <span>Category</span></h3><br>
+                <div class="row">
+                    <div class="image-cont col l4">
+                        <a href="#">
+                            <img src="Img/cake-main.jpg" width="100%" alt="" style="border-radius: 10px;">
+                        </a>
+                        <div class="image-content">
+                            <a href=""  style="color: white;">Cakes <i class="material-icons">call_made</i> </a>
+                        </div>
+                    </div>
+                    <div class="image-cont col l4">
+                        <a href="#">
+                            <img src="Img/chicken-main.jpg" width="100%" alt="" style="border-radius: 10px;">
+                        </a>
+                        <div class="image-content">
+                            <a href=""  style="color: white;">Chicken <i class="material-icons">call_made</i></a>
+                        </div>
+                    </div>
+                    <div class="image-cont col l4">
+                        <a href="#">
+                            <img src="Img/soup-main.jpg" width="100%" alt="" style="border-radius: 10px;">
+                        </a>
+                        <div class="image-content">
+                            <a href=""  style="color: white;">Soups <i class="material-icons">call_made</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container center-align hide-on-large-only">
+
+            </div>
+            <br>
+            <br>
+            <br>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col l6">
+                        <img src="Img/chef.jpg" class="hide-on-med-and-down" alt="" width="100%">
+                        <img src="Img/chef-thumbs-up.jpg" class="hide-on-large-only" alt="" width="100%">
+                    </div>
+                    <div class="col l6" id="chef-cont">
+                        <h3 class="hide-on-med-and-down">
+                            Crafted by Culinary <span style="color: #ad1457;">Wizards.</span>
+                        </h3>
+                        <h3 class="hide-on-large-only center-align">
+                            Crafted by Culinary <span style="color: #ad1457;">Wizards.</span>
+                        </h3>
+                        <p style="font-size: 25px;">Discover a world of flavorful options that promise mouthwatering results, meticulously curated and perfected by culinary experts, all at your fingertips. Easy as pie, isn't it?</p>
+                        <br>
+                        <br>
+                        <button class="btn btn-large pink darken-3">START COOKING</button>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="section black">
+                <h3 class="center-align hide-on-large-only">See Our <br> <span >numbers</span></h3>
+                <h3 class="center-align hide-on-small-and-down">See Our <span >numbers</span></h3>
+                <br>
+                <br>
+                <div class="container center-align">
+                    <div class="row">
+                        <div class="col l4 s12">
+                            <h1>27k+</h1>
+                            <h6>active users each month</h6>
+                        </div>
+                        <div class="col l4 s12">
+                            <h1>800+</h1>
+                            <h6>active users each month</h6>
+                        </div>
+                        <div class="col l4 s12">
+                            <h1>30+</h1>
+                            <h6>active users each month</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+
+            <div class="container">
+                <h3 class="left-align">Meet the <span>experts</span></h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nam est modi laudantium, at, maxime, repellat expedita cum harum ab quisquam animi quos perferendis tempora?</p> <br>
+
+                <div class="row">
+                    <div class="col l4 s12">
+                        <img src="Img/expert-1.jpg" width="100%" alt="">
+                        <h6>Liam <span>Hamish</span></h6>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="col l4 s12">
+                        <img src="Img/expert-2.jpg" width="100%" alt="">
+                        <h6>Alejandro <span>Mateo</span></h6>
+                        <br>
+                        <br>
+                    </div>
+                    
+                    <div class="col l4 s12">
+                        <img src="Img/expert-3.jpg" width="100%" alt="">
+                        <h6>Miranda <span>Tangrove</span></h6>
+                        <br>
+                    </div>
+                    
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="container divider"></div>
+
+            <div class="section center-align">
+                <h3 style="color: black;">Our Esteemed <span>Cliente</span></h3>
+                <div class="row">
+                    <div class="col l2 s6"><img src="Img/rest-1.avif" width="100%" alt=""></div>
+                    <div class="col l2 s6"><img src="Img/rest-2.avif" width="100%" alt=""></div>
+                    <div class="col l2 s6"><img src="Img/rest-3.avif" width="100%" alt=""></div>
+                    <div class="col l2 s6"><img src="Img/rest-4.avif" width="100%" alt=""></div>
+                    <div class="col l2 s6"><img src="Img/rest-5.avif" width="100%" alt=""></div>
+                    <div class="col l2 s6"><img src="Img/rest-6.avif" width="100%" alt=""></div>
+                </div>
+            </div>
+            <div class="divider container"></div>
+            <br>
+            <br>
+            <br>           
+        </main>
+            
+        <footer class="page-footer ">
+            <div class="container center-align">
+                <div class="row ">
+                    <div class="col l3 s12 left-align">
+                        <br><a class="orange-text text-darken-3" href="">About</a><br><br>
+                        <p>Who we are <br> Meet the Chefs <br>FAQs
+                        </p>
+                    </div>
+                    <div class="col l3 s12 left-align">
+                        <br><a class="orange-text text-darken-3" href="">Explore</a><br><br>
+                        <p>Recipes <br> Cakes <br>Chicken <br>Soups
+                    </div>
+                    <div class="col l3 s12 left-align">
+                        <br><a class="orange-text text-darken-3" href="">Legal</a><br><br>
+                        <p>Privacy Policy <br> Terms & Conditions <br>Disclosure
+                    </div>
+                    <div class="col l3 s12 left-align">
+                        <br><a class="orange-text text-darken-3" href="">Contact Us</a><br><br>
+                        <p>+2348136763185 <br> Lomeezehi@gmail.com 
+                    </div>
+                </div>
+                <div class="container">
+                    <section class="section">
+                        <h6 class="white-text hide-on-large-only"> &copy 2024.  Recipe.com.  All rights <br> reserved. </h6>
+                        <h6 class="white-text hide-on-med-and-down"> &copy 2024.  Recipe.com.  All rights reserved. </h6>
+                    </section>
+                </div>
+            </div>
+
+            
+
+        </footer>
+        
+        <!-- JS Scripts Below -->
+        <script src="js/jqueryv3.4.1.js"></script>
+        <script src="js/materialize.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            })
+        </script>
+    </body>
+</html>
