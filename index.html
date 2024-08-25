@@ -9,10 +9,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <title>Recipe.com</title>
         <style>
-            *{
-                margin: 0;
-            }
-
             button:hover{
                 transition: ease 0.2s;
                 font-weight: bold;
@@ -21,7 +17,7 @@
                 font-size: 20px;
             }
             .page-footer{
-                background: linear-gradient(to bottom, white, #e65100);
+                background: linear-gradient(to bottom, white, #ef6c00);
             }
             .page-footer p{
                 color: black;
@@ -54,6 +50,12 @@
                 z-index: 1;
                 position: fixed;
             }
+            .slider{
+                z-index: 0;
+            }
+            .slider .indicators .indicator-item.active {
+               background-color: #e65100;
+           }
             /* #chef-cont{
             } */
             .section h3, h1{
@@ -106,6 +108,19 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+
+            .image-cont-2 {
+            position: relative;
+            color: white;
+            }
+
+            .image-content-2{
+                position: absolute;
+                font-size: 35px;
+                text-decoration: underline;
+                top: 70px;
+                right: 25%;
             }
 
         </style>
@@ -207,6 +222,43 @@
             </div>
             <br>
             <br>
+
+            <!-- slider -->
+            <h3 class="center-align hide-on-large-only">Tap on a <span>Category</span></h3> <br><br>
+            <div class="slider hide-on-large-only">
+                <ul class="slides">
+                    <li>
+                        <div class="image-cont-2">
+                            <a href="">
+                                <img src="Img/cake-main.jpg" alt="">
+                            </a>
+                            <div class="image-content-2">
+                                <a href="" class="left-align"  style="color: white;">Cakes <i class="material-icons">call_made</i> </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-cont-2">
+                            <a href="">
+                                <img src="Img/chicken-main.jpg" alt="">
+                            </a>
+                            <div class="image-content-2">
+                                <a href=""  style="color: white;">Chicken <i class="material-icons">call_made</i> </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="image-cont-2">
+                            <a href="">
+                                <img src="Img/soup-main.jpg" alt="">
+                            </a>
+                            <div class="image-content-2">
+                                <a href=""  style="color: white;">Soups <i class="material-icons">call_made</i> </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
 
             
             <div class="container center-align hide-on-med-and-down">
@@ -380,6 +432,11 @@
         <script>
             $(document).ready(function(){
                 $('.sidenav').sidenav();
+                $('.slider').slider({
+                    height : 400,
+                    indicators: false,
+                    interval:2000
+                });
             })
         </script>
     </body>
